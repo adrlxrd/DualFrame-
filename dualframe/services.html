@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — BrandName</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar"></header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1 id="page-title">Our Services</h1>
+      <p id="page-subtitle">End-to-end solutions tailored to your needs</p>
+    </div>
+  </div>
+
+  <section class="section" id="services-content"></section>
+
+  <footer class="site-footer" id="footer"></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const s = SITE_CONFIG.services;
+      if (s?.pageTitle) document.getElementById('page-title').textContent = s.pageTitle;
+      if (s?.pageSubtitle) document.getElementById('page-subtitle').textContent = s.pageSubtitle;
+      document.title = `${s?.pageTitle || 'Services'} — ${SITE_CONFIG.brand?.name || 'Brand'}`;
+    });
+  </script>
+</body>
+</html>
