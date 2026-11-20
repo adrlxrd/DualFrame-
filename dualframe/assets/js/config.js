@@ -35,8 +35,6 @@ var SITE_CONFIG = {
     { text: "About",        href: "about.html",        icon: "👥" },
     { text: "Services",     href: "services.html",     icon: "⚡" },
     { text: "Portfolio",    href: "portfolio.html",    icon: "💼" },
-    { text: "Testimonials", href: "testimonials.html", icon: "⭐" },
-    { text: "Contact",      href: "contact.html",      icon: "✉️" },
   ],
   navCTA: { text: "Start a Project", href: "contact.html" },
 
@@ -45,7 +43,7 @@ var SITE_CONFIG = {
     headline: "YOU DREAM IT,<br><span>WE FRAME IT.</span>",
     subheadline: "Dual Frame Media turns brands into scroll-stopping stories — strategic campaigns, creator collaborations, and data-backed growth, all under one roof.",
     ctaPrimary: { text: "See the Work", href: "portfolio.html" },
-    ctaSecondary: { text: "Start a Project", href: "contact.html" },
+    ctaSecondary: { text: "Book a Call", href: "contact.html" },
     backgroundImage: null,            // URL or null for gradient
   },
 
@@ -64,7 +62,7 @@ var SITE_CONFIG = {
   homeCTA: {
     headline: "Ready to Start Your Project?",
     subheadline: "Let's discuss how we can help you achieve your goals.",
-    button: { text: "Get In Touch", href: "contact.html" },
+    button: { text: "Let's Talk", href: "contact.html" },
   },
 
   /* ── About Page ────────────────────────────────────────── */

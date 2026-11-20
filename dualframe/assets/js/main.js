@@ -143,13 +143,9 @@ function renderHero(hero) {
       </div>
       <div class="hero-camera" aria-hidden="true">
         <div class="camera-glow"></div>
-        <div class="camera-body">
-          <div class="camera-top"><span></span></div>
-          <div class="camera-lens">
-            <div class="lens-ring"><div class="lens-glass"></div></div>
-          </div>
+        <div class="camera-wrapper">
+          <img src="assets/images/hero-camera.png" alt="Vintage Silver and Black Rangefinder Cinema Camera" class="camera-image" width="720" height="580">
         </div>
-        <i class="bi bi-brightness-high camera-spark"></i>
       </div>
     </div>
     <div class="hero-ticker" aria-hidden="true">
