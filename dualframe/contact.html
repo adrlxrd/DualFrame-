@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — BrandName</title>
+  <title>Contact — DUALFRAME</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=dfm2026">
 </head>
 <body>
 
@@ -16,8 +16,8 @@
 
   <div class="page-header">
     <div class="container">
-      <h1 id="page-title">Contact Us</h1>
-      <p id="page-subtitle">Have a project in mind? Let's talk about it.</p>
+      <h1 id="page-title">Let's Connect</h1>
+      <p id="page-subtitle">Have a project in mind? Let's frame your story together.</p>
     </div>
   </div>
 
@@ -26,14 +26,14 @@
   <footer class="site-footer" id="footer"></footer>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/config.js?v=dfm2026"></script>
+  <script src="assets/js/main.js?v=dfm2026"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const c = SITE_CONFIG.contact;
       if (c?.pageTitle) document.getElementById('page-title').textContent = c.pageTitle;
       if (c?.pageSubtitle) document.getElementById('page-subtitle').textContent = c.pageSubtitle;
-      document.title = `${c?.pageTitle || 'Contact'} — ${SITE_CONFIG.brand?.name || 'Brand'}`;
+      document.title = `${c?.pageTitle || 'Contact'} — ${SITE_CONFIG.brand?.name || 'DUALFRAME'}`;
     });
   </script>
 </body>

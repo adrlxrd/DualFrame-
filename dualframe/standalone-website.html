@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BrandName — Innovation That Inspires</title>
+  <title>DUALFRAME — Video Production • Photography • Social Media</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   
   <!-- ============================================================
@@ -403,14 +403,41 @@
       z-index: 2;
       max-width: 760px;
     }
-    .hero h1 {
-      font-family: Impact, "Arial Black", sans-serif;
-      font-size: clamp(4.2rem, 8.2vw, 7.6rem);
-      font-weight: 900;
-      letter-spacing: -.035em;
-      line-height: .82;
-      margin-bottom: 28px;
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-accent) !important;
+      font-family: var(--font-heading);
+      font-size: clamp(.72rem, 1.1vw, .86rem) !important;
+      font-weight: 800;
+      letter-spacing: .22em;
       text-transform: uppercase;
+      margin-bottom: 22px !important;
+      white-space: nowrap !important;
+      max-width: none !important;
+      width: max-content;
+    }
+    .hero-eyebrow span {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      box-shadow: 0 0 18px var(--color-accent);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(3.2rem, 6.2vw, 5.8rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.08;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero h1 span {
+      color: var(--color-primary);
     }
     .hero p {
       font-size: 1.2rem;
@@ -811,6 +838,13 @@
       font-weight: 800;
       margin-bottom: 12px;
     }
+    .footer-logo {
+      height: 40px;
+      width: auto;
+      max-width: 240px;
+      display: block;
+      object-fit: contain;
+    }
     .footer-description {
       max-width: 380px;
       font-size: 0.95rem;
@@ -855,6 +889,23 @@
       background: var(--color-primary);
       border-color: var(--color-primary);
       transform: translateY(-2px);
+      color: #FFFFFF;
+    }
+    .footer-social a svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      display: block;
+      transition: transform var(--transition);
+    }
+    .footer-social a:hover svg {
+      transform: scale(1.08);
+    }
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      display: block;
     }
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -897,7 +948,16 @@
       .service-card { flex-direction: column; }
       .stats-grid, .process-grid { grid-template-columns: 1fr 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      .hero h1 { font-size: clamp(3.2rem, 15vw, 5.2rem); }
+      .hero h1 {
+        font-size: clamp(2.4rem, 11vw, 4.4rem);
+        line-height: 1.1;
+      }
+      .hero-eyebrow {
+        max-width: none !important;
+        white-space: nowrap !important;
+        font-size: clamp(.62rem, 2.5vw, .82rem) !important;
+        letter-spacing: .16em;
+      }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 36px 24px;
@@ -939,8 +999,8 @@
        ============================================================ -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-brand" onclick="navigateTo('home')">
-        <span class="brand-badge">✦</span> <span id="brandName">BrandName</span>
+      <div class="nav-brand" onclick="navigateTo('home')" style="cursor: pointer;">
+        <img src="assets/images/logo-dark.png" alt="DUALFRAME" style="height: 36px; width: auto; display: block;">
       </div>
 
       <!-- DESKTOP NAVBAR: Visible on Desktop, Hidden on Phone -->
@@ -983,8 +1043,8 @@
     </div>
     <div class="drawer-footer">
       <p class="drawer-footer-title">Direct Contact</p>
-      <a href="mailto:hello@brandname.com" class="drawer-contact-item" id="drawerEmail">✉ hello@brandname.com</a>
-      <a href="tel:+15551234567" class="drawer-contact-item" id="drawerPhone">📞 +1 (555) 123-4567</a>
+      <a href="mailto:hellodualframemedia@gmail.com" class="drawer-contact-item" id="drawerEmail">✉ hellodualframemedia@gmail.com</a>
+      <a href="tel:+918097488190" class="drawer-contact-item" id="drawerPhone">📞 +91 80974 88190</a>
     </div>
   </aside>
 
@@ -995,6 +1055,7 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
+          <p class="hero-eyebrow"><span></span> Video Production · Photography · Social Media</p>
           <h1 id="heroHeadline">YOU DREAM IT,<br><span style="color:var(--color-primary)">WE FRAME IT.</span></h1>
           <p id="heroSubheadline">Dual Frame Media turns brands into scroll-stopping stories — strategic campaigns, creator collaborations, and data-backed growth, all under one roof.</p>
           <div class="hero-buttons">
@@ -1014,27 +1075,27 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>What We Offer</h2>
-          <p>Quick overview of our core capabilities</p>
+          <h2>What We Create</h2>
+          <p>From concept to final cut — visual storytelling built to captivate</p>
         </div>
         <div class="features-grid">
           <div class="feature-card" onclick="navigateTo('services')">
-            <div class="feature-icon">🎨</div>
-            <h3>Design</h3>
-            <p>Beautiful, intuitive interfaces crafted with purpose and accessibility.</p>
-            <span class="feature-link">Explore design →</span>
+            <div class="feature-icon">🎥</div>
+            <h3>Video Production</h3>
+            <p>Cinematic brand films, commercial spots, high-energy reels, and product videos crafted with studio precision.</p>
+            <span class="feature-link">Explore Video →</span>
           </div>
           <div class="feature-card" onclick="navigateTo('services')">
-            <div class="feature-icon">💻</div>
-            <h3>Development</h3>
-            <p>Scalable, high-performance web applications built with modern tools.</p>
-            <span class="feature-link">Explore dev →</span>
+            <div class="feature-icon">📸</div>
+            <h3>Photography</h3>
+            <p>Editorial product photography, lifestyle shoots, and creative visual campaigns tailored to your brand identity.</p>
+            <span class="feature-link">Explore Photography →</span>
           </div>
           <div class="feature-card" onclick="navigateTo('services')">
-            <div class="feature-icon">☁️</div>
-            <h3>Cloud & Data</h3>
-            <p>Secure cloud infrastructure and data analytics to supercharge growth.</p>
-            <span class="feature-link">Explore cloud →</span>
+            <div class="feature-icon">📱</div>
+            <h3>Social Media</h3>
+            <p>End-to-end social strategy, short-form viral video production, creator management, and performance-driven content.</p>
+            <span class="feature-link">Explore Social →</span>
           </div>
         </div>
       </div>
@@ -1043,9 +1104,9 @@
     <section class="section section-alt">
       <div class="container">
         <div class="cta-banner">
-          <h2>Ready to Start Your Project?</h2>
-          <p>Let's discuss how we can help you achieve your goals and build something great.</p>
-          <button class="btn btn-primary" onclick="navigateTo('contact')">Let's Talk</button>
+          <h2>Have a Story That Needs Framing?</h2>
+          <p>Let's collaborate to bring your brand's vision to life through stunning video and photography.</p>
+          <button class="btn btn-primary" onclick="navigateTo('contact')">Start a Project</button>
         </div>
       </div>
     </section>
@@ -1057,43 +1118,43 @@
   <main class="page-view" id="view-about">
     <div class="page-banner">
       <div class="container">
-        <h1>About Us</h1>
-        <p>Learn more about who we are and what drives our passion</p>
+        <h1>About Dual Frame Media</h1>
+        <p>We turn bold concepts into unforgettable visual experiences</p>
       </div>
     </div>
     <section class="section">
       <div class="container">
         <p class="about-lead">
-          We are a team of passionate designers, developers, and strategists dedicated to building world-class digital products. With over a decade of experience, we turn ambitious ideas into reality.
+          Dual Frame Media is a creative video production, photography, and social media agency. We merge cinematic artistry with modern digital culture to produce compelling visual content that engages audiences, builds cult-like communities, and accelerates brand growth.
         </p>
 
         <div class="mv-grid">
           <div class="mv-card">
             <h3>Our Mission</h3>
-            <p>To empower businesses with innovative technology solutions that create lasting value and drive meaningful growth in the digital age.</p>
+            <p>To elevate brand storytelling through cinematic video production, striking photography, and trend-setting social content that drives real cultural impact.</p>
           </div>
           <div class="mv-card">
             <h3>Our Vision</h3>
-            <p>To be the most trusted technology partner for businesses worldwide, known for exceptional quality, creativity, and results.</p>
+            <p>To be the creative studio of choice for world-class brands and visionary creators looking to frame their legacy with authenticity and flair.</p>
           </div>
         </div>
 
         <div class="stats-grid">
-          <div class="stat-card"><div class="stat-value">200+</div><div class="stat-label">Projects Delivered</div></div>
-          <div class="stat-card"><div class="stat-value">50+</div><div class="stat-label">Happy Clients</div></div>
-          <div class="stat-card"><div class="stat-value">10+</div><div class="stat-label">Years Experience</div></div>
-          <div class="stat-card"><div class="stat-value">15</div><div class="stat-label">Team Members</div></div>
+          <div class="stat-card"><div class="stat-value">250+</div><div class="stat-label">Videos Produced</div></div>
+          <div class="stat-card"><div class="stat-value">120M+</div><div class="stat-label">Views Generated</div></div>
+          <div class="stat-card"><div class="stat-value">99%</div><div class="stat-label">Client Satisfaction</div></div>
+          <div class="stat-card"><div class="stat-value">50+</div><div class="stat-label">Brands Elevated</div></div>
         </div>
 
         <div class="section-header">
           <h2>Meet the Team</h2>
-          <p>The talented minds behind our creations</p>
+          <p>The visionary creatives behind our frames</p>
         </div>
         <div class="team-grid">
-          <div class="team-card"><div class="team-avatar-placeholder">AM</div><h4>Alex Morgan</h4><span>CEO & Founder</span></div>
-          <div class="team-card"><div class="team-avatar-placeholder">JL</div><h4>Jordan Lee</h4><span>Lead Designer</span></div>
-          <div class="team-card"><div class="team-avatar-placeholder">TK</div><h4>Taylor Kim</h4><span>CTO</span></div>
-          <div class="team-card"><div class="team-avatar-placeholder">CR</div><h4>Casey Rivera</h4><span>Project Manager</span></div>
+          <div class="team-card"><div class="team-avatar-placeholder">HN</div><h4>Hiten Nirmal</h4><span>Creative Director & Founder</span></div>
+          <div class="team-card"><div class="team-avatar-placeholder">PC</div><h4>Production Crew</h4><span>Cinematography & Lighting</span></div>
+          <div class="team-card"><div class="team-avatar-placeholder">PL</div><h4>Post-Production Lead</h4><span>Editing & Color Grading</span></div>
+          <div class="team-card"><div class="team-avatar-placeholder">SS</div><h4>Social Strategist</h4><span>Content & Distribution</span></div>
         </div>
       </div>
     </section>
@@ -1105,56 +1166,56 @@
   <main class="page-view" id="view-services">
     <div class="page-banner">
       <div class="container">
-        <h1>Our Services</h1>
-        <p>End-to-end solutions tailored to your unique requirements</p>
+        <h1>Our Creative Services</h1>
+        <p>Full-spectrum visual production and social growth for modern brands</p>
       </div>
     </div>
     <section class="section">
       <div class="container">
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">🎨</div>
+            <div class="service-icon">🎥</div>
             <div class="service-body">
-              <h3>UI/UX Design</h3>
-              <p>Beautiful, intuitive interfaces designed with your users in mind. We focus on usability, accessibility, and modern aesthetics.</p>
-              <ul class="service-features"><li>✓ User Research</li><li>✓ Wireframing</li><li>✓ Design Systems</li></ul>
+              <h3>Commercial & Brand Films</h3>
+              <p>Cinematic storytelling designed to build emotional resonance, launch flagship products, and position your brand at the pinnacle of your industry.</p>
+              <ul class="service-features"><li>✓ Storyboarding & Scriptwriting</li><li>✓ Cinematic 4K/6K Filming</li><li>✓ Professional Lighting & Sound</li><li>✓ Color Grade & Audio Mastering</li></ul>
             </div>
           </div>
           <div class="service-card">
-            <div class="service-icon">💻</div>
+            <div class="service-icon">📸</div>
             <div class="service-body">
-              <h3>Web Development</h3>
-              <p>High-performance, scalable websites and web applications built with modern technologies and clean architecture.</p>
-              <ul class="service-features"><li>✓ Full-stack Apps</li><li>✓ APIs</li><li>✓ CMS Integration</li></ul>
+              <h3>Commercial Photography</h3>
+              <p>Crisp, studio-grade product photography, evocative lifestyle shoots, and creative campaign imagery ready for e-commerce, digital ads, and billboards.</p>
+              <ul class="service-features"><li>✓ Studio Product Photography</li><li>✓ Lifestyle & On-Location Shoots</li><li>✓ Creative Art Direction</li><li>✓ High-End Retouching</li></ul>
             </div>
           </div>
           <div class="service-card">
             <div class="service-icon">📱</div>
             <div class="service-body">
-              <h3>Mobile Apps</h3>
-              <p>Native and cross-platform mobile applications delivering seamless, responsive experiences across devices.</p>
-              <ul class="service-features"><li>✓ iOS & Android</li><li>✓ Cross-platform</li><li>✓ Push Alerts</li></ul>
+              <h3>Social Media Content & Reels</h3>
+              <p>High-volume, scroll-stopping short-form video production engineered specifically for Instagram Reels, TikTok, and YouTube Shorts.</p>
+              <ul class="service-features"><li>✓ Trending Audio & Formats</li><li>✓ Rapid Batch Production</li><li>✓ Hook & Retention Optimization</li><li>✓ Dynamic Captions & Motion</li></ul>
             </div>
           </div>
           <div class="service-card">
-            <div class="service-icon">☁️</div>
+            <div class="service-icon">🚁</div>
             <div class="service-body">
-              <h3>Cloud Solutions</h3>
-              <p>Secure, reliable cloud infrastructure and automated CI/CD deployments that keep your systems running 24/7.</p>
-              <ul class="service-features"><li>✓ AWS / GCP</li><li>✓ CI/CD Pipelines</li><li>✓ Monitoring</li></ul>
+              <h3>Aerial & Drone Videography</h3>
+              <p>Licensed drone pilots capturing breathtaking landscape, automotive, and architectural perspectives from above.</p>
+              <ul class="service-features"><li>✓ 4K Aerial Footage</li><li>✓ Dynamic FPV Racing & Tracking</li><li>✓ Architectural Perspectives</li><li>✓ Automotive Tracking</li></ul>
             </div>
           </div>
         </div>
 
         <div class="section-header">
-          <h2>Our Process</h2>
-          <p>How we take your project from idea to completion</p>
+          <h2>How We Bring Ideas to Life</h2>
+          <p>Our proven creative production pipeline</p>
         </div>
         <div class="process-grid">
-          <div class="process-card"><div class="process-number">01</div><h3>Discovery</h3><p>We analyze your business, goals, and challenges.</p></div>
-          <div class="process-card"><div class="process-number">02</div><h3>Strategy</h3><p>We craft a clear plan and architectural roadmap.</p></div>
-          <div class="process-card"><div class="process-number">03</div><h3>Build</h3><p>We iteratively design, code, and test your product.</p></div>
-          <div class="process-card"><div class="process-number">04</div><h3>Launch</h3><p>We deploy, monitor, and provide continuous support.</p></div>
+          <div class="process-card"><div class="process-number">01</div><h3>Pre-Production</h3><p>Concept development, storyboarding, shot lists, location scouting, and talent casting.</p></div>
+          <div class="process-card"><div class="process-number">02</div><h3>Production</h3><p>On-set filming and photography using cinema-grade cameras, lighting, and audio equipment.</p></div>
+          <div class="process-card"><div class="process-number">03</div><h3>Post-Production</h3><p>Precision editing, color grading, sound design, motion graphics, and collaborative feedback.</p></div>
+          <div class="process-card"><div class="process-number">04</div><h3>Delivery</h3><p>Final high-resolution master exports tailored for digital ads, web, social, and broadcast.</p></div>
         </div>
       </div>
     </section>
@@ -1167,58 +1228,58 @@
     <div class="page-banner">
       <div class="container">
         <h1>Our Work</h1>
-        <p>A selection of recent projects we are proud of</p>
+        <p>A selection of cinematic films, photography campaigns, and viral reels</p>
       </div>
     </div>
     <section class="section">
       <div class="container">
         <div class="portfolio-grid">
           <div class="portfolio-card">
-            <div class="portfolio-image">🛍️</div>
+            <div class="portfolio-image">🎬</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Web Development</div>
-              <h3>E-Commerce Platform</h3>
-              <p>A full-featured online store with real-time inventory and AI-powered recommendations.</p>
+              <div class="portfolio-tag">Cinematic Film</div>
+              <h3>Urban Moto Chronicles</h3>
+              <p>High-octane motorcycle cinematography capturing the energy of city streets at twilight.</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="portfolio-image">📊</div>
+            <div class="portfolio-image">📸</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">UI/UX Design</div>
-              <h3>FinTech Dashboard</h3>
-              <p>An intuitive financial dashboard for tracking investment portfolios and market trends.</p>
+              <div class="portfolio-tag">Commercial Photography</div>
+              <h3>Monochrome Studio Series</h3>
+              <p>Minimalist studio product photography emphasizing texture, glass reflections, and clean lighting.</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="portfolio-image">🏃</div>
+            <div class="portfolio-image">📱</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Mobile App</div>
-              <h3>Health & Fitness App</h3>
-              <p>A cross-platform mobile app with workout logging, nutrition guides, and progress charts.</p>
+              <div class="portfolio-tag">Social Media & Reels</div>
+              <h3>Pulse Streetwear Campaign</h3>
+              <p>Fast-paced, stylized vertical video series generating over 2.4M views on Instagram.</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="portfolio-image">☁️</div>
+            <div class="portfolio-image">🌄</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Cloud Infrastructure</div>
-              <h3>Enterprise Cloud Migration</h3>
-              <p>Migrated legacy on-prem infrastructure into a highly available multi-region cloud setup.</p>
+              <div class="portfolio-tag">Documentary Video</div>
+              <h3>Horizon Travel Documentary</h3>
+              <p>A cinematic visual journey through rugged landscapes featuring 4K aerial drone sequences.</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="portfolio-image">🤖</div>
+            <div class="portfolio-image">☕</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">AI & Data</div>
-              <h3>Customer Support AI</h3>
-              <p>An intelligent automated assistant that reduced support response times by 65%.</p>
+              <div class="portfolio-tag">Brand Story</div>
+              <h3>Artisan Coffee Roasters</h3>
+              <p>A sensory exploration of artisanal coffee making, from raw beans to espresso pour.</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="portfolio-image">🔒</div>
+            <div class="portfolio-image">🏎️</div>
             <div class="portfolio-body">
-              <div class="portfolio-tag">Cybersecurity</div>
-              <h3>Security Auditing System</h3>
-              <p>Automated vulnerability scanning and compliance monitoring for enterprise networks.</p>
+              <div class="portfolio-tag">Automotive Film</div>
+              <h3>Velocita Automotive Showcase</h3>
+              <p>Precision tracking shots and aggressive sound design highlighting bespoke luxury vehicles.</p>
             </div>
           </div>
         </div>
@@ -1232,53 +1293,53 @@
   <main class="page-view" id="view-testimonials">
     <div class="page-banner">
       <div class="container">
-        <h1>Testimonials</h1>
-        <p>Hear directly from partners and clients we've worked with</p>
+        <h1>Client Stories</h1>
+        <p>What creators and brands say about working with Dual Frame Media</p>
       </div>
     </div>
     <section class="section">
       <div class="container">
         <div class="testimonials-grid">
           <div class="testimonial-card">
-            <blockquote>"Working with this team was a game changer. They delivered beyond our expectations and on time."</blockquote>
+            <blockquote>"Dual Frame Media took our brand's visual identity to a completely new level. The commercial they produced exceeded all our expectations."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">SJ</div>
-              <div class="author-info"><strong>Sarah Johnson</strong><span>CEO, TechVentures</span></div>
+              <div class="testimonial-avatar">AS</div>
+              <div class="author-info"><strong>Aman Sharma</strong><span>Founder, Apex Apparel</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"Their attention to detail and commitment to quality is unmatched. Highly recommended!"</blockquote>
+            <blockquote>"Their cinematic eye and attention to lighting and sound design is phenomenal. The Reels they shot for us doubled our engagement in weeks."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">MC</div>
-              <div class="author-info"><strong>Michael Chen</strong><span>CTO, DataFlow Inc.</span></div>
+              <div class="testimonial-avatar">RM</div>
+              <div class="author-info"><strong>Rhea Mehta</strong><span>Marketing Director, Vibe Studio</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"They didn't just build us a product — they became a true partner in our growth journey."</blockquote>
+            <blockquote>"Working with Hiten and the team was effortless. Highly professional from pre-production planning to final delivery."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">ER</div>
-              <div class="author-info"><strong>Emily Rodriguez</strong><span>Founder, GreenLeaf</span></div>
+              <div class="testimonial-avatar">KS</div>
+              <div class="author-info"><strong>Karan Singhania</strong><span>Creative Producer</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"Our revenue increased 35% within six months of launching the platform they built for us."</blockquote>
+            <blockquote>"The product photography series was breathtaking. Crisp, vibrant, and delivered right on deadline."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">LW</div>
-              <div class="author-info"><strong>Lisa Wang</strong><span>COO, ShopSmart</span></div>
+              <div class="testimonial-avatar">PP</div>
+              <div class="author-info"><strong>Pooja Patel</strong><span>Head of Growth, Lumina Goods</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"Exceptional engineering standards. The cleanest codebase we've ever received from an agency."</blockquote>
+            <blockquote>"They don't just shoot video — they understand pacing, audience psychology, and what makes people stop scrolling."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">DP</div>
-              <div class="author-info"><strong>David Park</strong><span>VP Engineering, Nexus</span></div>
+              <div class="testimonial-avatar">VM</div>
+              <div class="author-info"><strong>Vikram Malhotra</strong><span>Brand Strategist, Nexus Media</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"The best technology investment we've made. Period. Responsive and proactive support."</blockquote>
+            <blockquote>"The best creative investment we've made for our social campaigns. Highly recommended for any brand wanting to stand out."</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">RK</div>
-              <div class="author-info"><strong>Robert Kim</strong><span>Director, BluePeak</span></div>
+              <div class="testimonial-avatar">SR</div>
+              <div class="author-info"><strong>Siddharth Rao</strong><span>Director, Elevate Brands</span></div>
             </div>
           </div>
         </div>
@@ -1292,8 +1353,8 @@
   <main class="page-view" id="view-contact">
     <div class="page-banner">
       <div class="container">
-        <h1>Contact Us</h1>
-        <p>Have a project in mind or want to collaborate? Let's talk!</p>
+        <h1>Let's Connect</h1>
+        <p>Have a project in mind? Let's frame your story together.</p>
       </div>
     </div>
     <section class="section">
@@ -1303,15 +1364,22 @@
             <h3>Let's Connect</h3>
             <p>Whether you have a question, an exciting project idea, or just want to explore opportunities — send us a note.</p>
             <div class="contact-details">
-              <div class="contact-detail"><div class="detail-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div><span>hello@brandname.com</span></div>
-              <div class="contact-detail"><div class="detail-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div><span>+1 (555) 123-4567</span></div>
-              <div class="contact-detail"><div class="detail-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></div><span>123 Innovation Drive, Tech City, TC 10001</span></div>
+              <div class="contact-detail"><div class="detail-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div><span><a href="mailto:hellodualframemedia@gmail.com" style="color:inherit; text-decoration:none;">hellodualframemedia@gmail.com</a></span></div>
+              <div class="contact-detail"><div class="detail-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div><span><a href="tel:+918097488190" style="color:inherit; text-decoration:none;">+91 80974 88190</a></span></div>
             </div>
             <div class="social-links">
-              <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-              <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-              <a href="#" class="social-link" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-              <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/hiten_04?jplx=MWtqczdmNG9oNnAxYQ%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.behance.net/hitennirmal1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance" title="Behance">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.976 3-3.468 0-5.75-2.783-5.75-6.042 0-3.376 2.308-6.083 5.642-6.083 3.42 0 5.358 2.593 5.358 5.766 0 .445-.045.981-.077 1.292h-8.084c.063 1.956 1.341 3.267 3.328 3.267 1.542 0 2.502-.693 3.011-1.2l1.548 1zm-2.883-4.103c-.048-1.554-1.077-2.674-2.613-2.674-1.488 0-2.49 1.054-2.673 2.674h5.286zm-14.843 7.103h-6v-16h6.136c3.218 0 5.166 1.554 5.166 4.198 0 1.63-.872 2.92-2.193 3.513 1.83.606 2.891 2.052 2.891 4.025 0 2.766-2.148 4.264-6 4.264zm-3.158-9.458h3.045c1.479 0 2.373-.679 2.373-1.895 0-1.161-.871-1.776-2.327-1.776h-3.091v3.671zm0 6.643h3.295c1.678 0 2.716-.761 2.716-2.174 0-1.343-1.026-2.094-2.693-2.094h-3.318v4.268z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/hiten-nirmal-211536263?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://wa.me/918097488190" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
             </div>
           </div>
           <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! Thank you for reaching out.'); this.reset();">
@@ -1347,8 +1415,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-block">
-          <div class="footer-brand"><i class="bi bi-stars" aria-hidden="true" style="color:var(--color-accent)"></i> BrandName</div>
-          <p class="footer-description">We craft digital experiences that drive growth and delight users.</p>
+          <div class="footer-brand">
+            <a href="#home" onclick="navigateTo('home')" aria-label="DUALFRAME"><img src="assets/images/logo-light.png" alt="DUALFRAME MEDIA" class="footer-logo" style="height:40px; width:auto; display:block;"></a>
+          </div>
+          <p class="footer-description">Dual Frame Media turns brands into scroll-stopping stories — strategic campaigns, creator collaborations, and data-backed growth, all under one roof.</p>
         </div>
         <div>
           <h4 class="footer-heading">Explore</h4>
@@ -1362,18 +1432,27 @@
           <h4 class="footer-heading">Get in Touch</h4>
           <div class="footer-links">
             <a href="#contact" onclick="navigateTo('contact')">Contact Us</a>
-            <a href="mailto:hello@brandname.com">hello@brandname.com</a>
+            <a href="mailto:hellodualframemedia@gmail.com">hellodualframemedia@gmail.com</a>
+            <a href="tel:+918097488190">+91 80974 88190</a>
           </div>
           <div class="footer-social" style="margin-top:16px">
-            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/hiten_04?jplx=MWtqczdmNG9oNnAxYQ%3D%3D" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.behance.net/hitennirmal1" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Behance" title="Behance">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.976 3-3.468 0-5.75-2.783-5.75-6.042 0-3.376 2.308-6.083 5.642-6.083 3.42 0 5.358 2.593 5.358 5.766 0 .445-.045.981-.077 1.292h-8.084c.063 1.956 1.341 3.267 3.328 3.267 1.542 0 2.502-.693 3.011-1.2l1.548 1zm-2.883-4.103c-.048-1.554-1.077-2.674-2.613-2.674-1.488 0-2.49 1.054-2.673 2.674h5.286zm-14.843 7.103h-6v-16h6.136c3.218 0 5.166 1.554 5.166 4.198 0 1.63-.872 2.92-2.193 3.513 1.83.606 2.891 2.052 2.891 4.025 0 2.766-2.148 4.264-6 4.264zm-3.158-9.458h3.045c1.479 0 2.373-.679 2.373-1.895 0-1.161-.871-1.776-2.327-1.776h-3.091v3.671zm0 6.643h3.295c1.678 0 2.716-.761 2.716-2.174 0-1.343-1.026-2.094-2.693-2.094h-3.318v4.268z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/hiten-nirmal-211536263?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://wa.me/918097488190" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp" title="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <span id="footerCopyright">© 2026 BrandName. All rights reserved.</span>
+        <span id="footerCopyright">© 2026 DUALFRAME. All rights reserved.</span>
         <span>Privacy Policy &nbsp; · &nbsp; Terms of Service</span>
       </div>
     </div>
@@ -1386,9 +1465,9 @@
     /* ── ⭐ CONFIGURATION: Edit these values to rebrand anytime ── */
     const SITE_CONFIG = {
       brand: {
-        name: "BrandName",
-        email: "hello@brandname.com",
-        phone: "+1 (555) 123-4567"
+        name: "DUALFRAME",
+        email: "hellodualframemedia@gmail.com",
+        phone: "+91 80974 88190"
       },
       theme: {
         primary: "#DC2626",
